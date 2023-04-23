@@ -5,19 +5,19 @@
 template<typename T>
 class TPQueue {
     private:
-    struct Item {
+     struct Item {
         T value;
         Item* next;
-    };
-    T result;
-    Item* head;
-    TPQueue::Item* create(const T&);
+     };
+     T result;
+     Item* head;
+     TPQueue::Item* create(const T&);
     public:
-    TPQueue() : head(nullptr) {}
-    bool isEmpty() const;
-    void push(const T&);
-    const T& pop();
-    ~TPQueue() {}
+     TPQueue() : head(nullptr) {}
+     bool isEmpty() const;
+     void push(const T&);
+     const T& pop();
+     ~TPQueue() {}
 };
 template <typename T>
 typename TPQueue<T>::Item* TPQueue<T>::create(const T& value) {
