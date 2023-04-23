@@ -4,7 +4,7 @@
 #include <string>
 template<typename T>
 class TPQueue {
-   private:
+    private:
     struct Item {
         T value;
         Item* next;
@@ -12,7 +12,7 @@ class TPQueue {
     T result;
     Item* head;
     TPQueue::Item* create(const T&);
-   public:
+    public:
     TPQueue() : head(nullptr) {}
     bool isEmpty() const;
     void push(const T&);
