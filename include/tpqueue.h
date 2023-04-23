@@ -39,7 +39,7 @@ const T& TPQueue<T>::pop() {
         Item* temp = head->next;
         delete head;
         head = temp;
-        return result
+        return result;
     }
 }
 template <typename T>
