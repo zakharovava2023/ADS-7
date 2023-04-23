@@ -4,14 +4,15 @@
 #include <string>
 template<typename T>
 class TPQueue {
-  private:
+   private:
     struct Item {
         T value;
         Item* next;
-      };
+    };
+    T result;
     Item* head;
     TPQueue::Item* create(const T&);
-  public:
+   public:
     TPQueue() : head(nullptr) {}
     bool isEmpty() const;
     void push(const T&);
@@ -33,9 +34,8 @@ template <typename T>
 const T& TPQueue<T>::pop() {
     if (isEmpty()) {
         throw std::string("Empty!");
-    }
-    else {
-        T result = head->value;
+    } else {
+        result = head->value;
         Item* temp = head->next;
         delete head;
         head = temp;
@@ -54,8 +54,7 @@ void TPQueue<T>::push(const T& value) {
     if (prev == nullptr) {
         current->next = head;
         head = current;
-    }
-    else {
+    } else {
         prev->next = current;
         current->next = tmp;
     }
